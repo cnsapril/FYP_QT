@@ -1,0 +1,65 @@
+﻿Build started 16/2/2017 4:05:11 PM.
+     1>Project "C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\FYP_QT.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Moc'ing MainWindow.h...
+         Rcc'ing MainWindow.qrc...
+     1>RCC : warning : No resources in 'C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\MainWindow.qrc'.
+         
+         Uic'ing MainWindow.ui...
+         Moc'ing CustomGlWidget.hpp...
+         Moc'ing CoverGlWidget.hpp...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_CoverGlWidget.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_CoverGlWidget.cpp, GeneratedFiles\Release\moc_CoverGlWidget.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_CustomGlWidget.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_CustomGlWidget.cpp, GeneratedFiles\Release\moc_CustomGlWidget.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_MainWindow.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_MainWindow.cpp, GeneratedFiles\Release\moc_MainWindow.cpp.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\opencv\build\include /IC:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\..\Middleware\boost_1_60_0\ /IC:\OpenHaptics\Developer\3.4.0\utilities\include /IC:\OpenHaptics\Developer\3.4.0\include /IC:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\..\Middleware\glm /IC:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\..\Middleware\glew\include /I.\GeneratedFiles /I. /IC:\Qt\5.7\msvc2013_64\include /I.\GeneratedFiles\Debug /IC:\Qt\5.7\msvc2013_64\include\QtCore /IC:\Qt\5.7\msvc2013_64\include\QtGui /IC:\Qt\5.7\msvc2013_64\include\QtOpenGL /IC:\Qt\5.7\msvc2013_64\include\QtWidgets /Zi /nologo /W1 /WX- /Od /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\Temp\\" /Fd"x64\Debug\Temp\vc120.pdb" /Gd /TP /errorReport:prompt Editor\ContactModel_CV.cpp Editor\CustomGlWidget.cpp Editor\GLM.cpp GeneratedFiles\Debug\moc_CoverGlWidget.cpp GeneratedFiles\Debug\moc_CustomGlWidget.cpp GeneratedFiles\Debug\moc_MainWindow.cpp Helpers\AccSynthHashMatrix.cpp Helpers\ContactModel.cpp CoverGlWidget.cpp Helpers\pugixml.cpp Helpers\ShapeGenerator.cpp MainWindow.cpp main.cpp
+         ContactModel_CV.cpp
+     1>Editor\ContactModel_CV.cpp(342): warning C4172: returning address of local variable or temporary
+         CustomGlWidget.cpp
+         GLM.cpp
+         moc_CoverGlWidget.cpp
+         moc_CustomGlWidget.cpp
+         moc_MainWindow.cpp
+         AccSynthHashMatrix.cpp
+         ContactModel.cpp
+         CoverGlWidget.cpp
+     1>C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\xutility(2715): warning C4996: 'std::_Fill_n': Function call with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\xutility(2701) : see declaration of 'std::_Fill_n'
+                 C:\Users\WengBin\Desktop\NINGSHUANG\Middleware\boost_1_60_0\boost/random/detail/polynomial.hpp(114) : see reference to function template instantiation '_OutIt std::fill_n<boost::random::detail::polynomial_ops::digit_t*,size_t,boost::random::detail::polynomial_ops::digit_t>(_OutIt,_Diff,const _Ty &)' being compiled
+                 with
+                 [
+                     _OutIt=boost::random::detail::polynomial_ops::digit_t *
+         ,            _Diff=size_t
+         ,            _Ty=boost::random::detail::polynomial_ops::digit_t
+                 ]
+         pugixml.cpp
+         ShapeGenerator.cpp
+         MainWindow.cpp
+         main.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\opencv\build\include /IC:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\..\Middleware\boost_1_60_0\ /IC:\OpenHaptics\Developer\3.4.0\utilities\include /IC:\OpenHaptics\Developer\3.4.0\include /IC:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\..\Middleware\glm /IC:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\..\Middleware\glew\include /I.\GeneratedFiles /I. /IC:\Qt\5.7\msvc2013_64\include /I.\GeneratedFiles\Debug /IC:\Qt\5.7\msvc2013_64\include\QtCore /IC:\Qt\5.7\msvc2013_64\include\QtGui /IC:\Qt\5.7\msvc2013_64\include\QtOpenGL /IC:\Qt\5.7\msvc2013_64\include\QtWidgets /Zi /nologo /W1 /WX- /Od /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\Temp\\" /Fd"x64\Debug\Temp\vc120.pdb" /Gd /TP /errorReport:prompt GeneratedFiles\qrc_MainWindow.cpp
+         qrc_MainWindow.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /l"0x0409" /nologo /fo"x64\Debug\Temp\res.res" res.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\x64\Debug\\FYP_QT.exe" /NOLOGO /LIBPATH:C:\opencv\build\x64\vc12\lib /LIBPATH:C:\OpenHaptics\Developer\3.4.0\utilities\lib\x64\Debug /LIBPATH:C:\OpenHaptics\Developer\3.4.0\lib\x64\Debug /LIBPATH:C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\..\Middleware\SOIL\lib /LIBPATH:C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\..\Middleware\glew\lib /LIBPATH:C:\Qt\5.7\msvc2013_64\lib opencv_core2413d.lib opencv_highgui2413d.lib opencv_imgproc2413d.lib hlu.lib hdu.lib hl.lib hd.lib glew32d.lib SOIL.lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5OpenGLd.lib opengl32.lib glu32.lib Qt5Widgetsd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\x64\Debug\FYP_QT.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\x64\Debug\FYP_QT.lib" /MACHINE:X64 x64\Debug\Temp\res.res
+         x64\Debug\Temp\ContactModel_CV.obj
+         x64\Debug\Temp\CustomGlWidget.obj
+         x64\Debug\Temp\GLM.obj
+         x64\Debug\Temp\moc_CoverGlWidget.obj
+         x64\Debug\Temp\moc_CustomGlWidget.obj
+         x64\Debug\Temp\moc_MainWindow.obj
+         x64\Debug\Temp\qrc_MainWindow.obj
+         x64\Debug\Temp\AccSynthHashMatrix.obj
+         x64\Debug\Temp\ContactModel.obj
+         x64\Debug\Temp\CoverGlWidget.obj
+         x64\Debug\Temp\pugixml.obj
+         x64\Debug\Temp\ShapeGenerator.obj
+         x64\Debug\Temp\MainWindow.obj
+         x64\Debug\Temp\main.obj
+         FYP_QT.vcxproj -> C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\x64\Debug\FYP_QT.exe
+     1>Done Building Project "C:\Users\WengBin\Desktop\NINGSHUANG\FYP_QT\FYP_QT.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:29.68
