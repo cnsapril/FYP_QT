@@ -446,7 +446,6 @@ CoverGlWidget::CoverGlWidget(QWidget *parent)
 
 	myTimer = new QTimer();
 	connect(myTimer, SIGNAL(timeout()), this, SLOT(update()));
-	myTimer->start(30);
 }
 
 CoverGlWidget::~CoverGlWidget()
@@ -500,6 +499,7 @@ void CoverGlWidget::initializeGL()
 	loadTexture(frontCoverPath.c_str(), backCoverPath.c_str(), weightText.c_str());
 	installShaders();
 	initHD();
+	myTimer->start(30);
 }
 
 void CoverGlWidget::paintGL()
@@ -881,11 +881,11 @@ void CoverGlWidget::DefineForceField()
 
 void CoverGlWidget::loadTexture(const char *imgPathFront, const char *imgPathBack, const char *imgPathWeight)
 {
-	img_front = cvLoadImage(imgPathFront, 1);
-	img_back = cvLoadImage(imgPathBack, 1);
-	img_weight = cvLoadImage(imgPathWeight, 1);
+	img_front = QGLWidget::convertToGLFormat(QImage(imgPathFront).mirrored());
+	img_back = QGLWidget::convertToGLFormat(QImage(imgPathBack).mirrored());
+	img_weight = QGLWidget::convertToGLFormat(QImage(imgPathWeight).mirrored());
 
-	if (img_front == NULL || img_back == NULL)
+	if (img_front.isNull() || img_back.isNull() || img_weight.isNull())
 	{
 		cout << "The image does not exist.\n";
 		cout << "\nPress any key to quit.\n";
@@ -894,7 +894,7 @@ void CoverGlWidget::loadTexture(const char *imgPathFront, const char *imgPathBac
 	}
 }
 
-void CoverGlWidget::attachTexture(IplImage *currentImg)
+void CoverGlWidget::attachTexture(QImage currentImg)
 {
 	GLuint texture;
 	glGenTextures(1, &texture);
@@ -906,8 +906,8 @@ void CoverGlWidget::attachTexture(IplImage *currentImg)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, currentImg->width, currentImg->height, 0, GL_BGR_EXT,
-		GL_UNSIGNED_BYTE, currentImg->imageData);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, currentImg.width(), currentImg.height(), 0, GL_RGBA,
+		GL_UNSIGNED_BYTE, currentImg.bits());
 }
 
 void CoverGlWidget::coverChanged(int currentIndex)

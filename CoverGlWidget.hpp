@@ -27,8 +27,6 @@
 #include <HD/hd.h>
 #include <HDU/hduError.h>
 #include <HDU\hduVector.h>
-#include <opencv\cv.h>
-#include <opencv\highgui.h>
 
 using glm::vec3;
 using glm::mat4;
@@ -43,9 +41,9 @@ public:
 	void selectionUp();						// Emits the signal that upper button has been pressed within selection mode
 	void selectionDown();					// Emits the signal that lower button has been pressed within selection mode
 
-	IplImage *img_front;
-	IplImage *img_back;
-	IplImage *img_weight;
+	QImage img_front;
+	QImage img_back;
+	QImage img_weight;
 protected:
 	void initializeGL();					// Initialization of OpenGL and OpenHaptics
 	void paintGL();							// Main function to draw the graphics scene and initiate communication between graphics thread and haptics thread
@@ -61,7 +59,7 @@ private:
 	void updateWorkspace(hduVector3Dd LLB, hduVector3Dd TRF);
 	void DefineForceField();
 	void loadTexture(const char *imgPathFront, const char *imgPathBack, const char *imgPathWeight);
-	void attachTexture(IplImage *currentImg);
+	void attachTexture(QImage currentImg);
 
 	QTimer* myTimer;
 
