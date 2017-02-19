@@ -51,9 +51,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_CoverGlWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_CustomGlWidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Helpers\ShapeGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -63,38 +60,23 @@
     <ClCompile Include="GeneratedFiles\Release\moc_MainWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_MainWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Helpers\AccSynthHashMatrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Helpers\pugixml.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_CoverGlWidget.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_CustomGlWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_MainWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_CustomGlWidget.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_CoverGlWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Editor\GLM.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Editor\ContactModel_CV.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Editor\CustomGlWidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_CustomGlWidget.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_CustomGlWidget.cpp">
-      <Filter>Generated Files\Release</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -111,9 +93,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Helpers\stb_image.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_MainWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Helpers\Constants.h">
@@ -140,16 +119,7 @@
     <ClInclude Include="Helpers\sharedInit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Editor\GLM.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Editor\Vec3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Editor\ContactModel_CV.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Editor\Constants_CV.h">
+    <ClInclude Include="GeneratedFiles\ui_MainWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -162,9 +132,6 @@
       <Filter>Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="CoverGlWidget.hpp">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Editor\CustomGlWidget.hpp">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
